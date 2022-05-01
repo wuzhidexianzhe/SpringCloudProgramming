@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="315d8f27-59b4-44cb-83d6-c6fd000c13f3" name="变更" comment="父类pom">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/example/gatewayserver/config/UriConfiguration.java" afterDir="false" />
+    <list default="true" id="315d8f27-59b4-44cb-83d6-c6fd000c13f3" name="变更" comment="gateway 集成完毕。 还需要 oauth2，spring config、server">
+      <change afterPath="$PROJECT_DIR$/base-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/src/main/java/com/example/baseserver/BaseServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/src/main/java/com/example/baseserver/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-server/src/test/java/com/example/baseserver/BaseServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/example/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/example/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/example/gatewayserver/GatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/example/gatewayserver/GatewayServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/test/java/com/example/gatewayserver/GatewayServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/test/java/com/example/gatewayserver/GatewayServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/example/gatewayserver/config/UriConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/example/gatewayserver/config/UriConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +83,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GatewayServerApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
     <configuration name="GatewayServerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gateway-server" />
       <extension name="coverage">
@@ -103,6 +111,13 @@
       <option name="MAIN_CLASS_NAME" value="com.example.gatewayserver.GatewayServerApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaseServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.baseserver.BaseServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,7 +157,7 @@
       <workItem from="1651306402190" duration="3611000" />
       <workItem from="1651373373147" duration="5717000" />
       <workItem from="1651404040145" duration="711000" />
-      <workItem from="1651405172741" duration="8967000" />
+      <workItem from="1651405172741" duration="12953000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交测试">
       <created>1651368408300</created>
@@ -158,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651368732754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gateway 集成完毕。 还需要 oauth2，spring config、server">
+      <created>1651416052149</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651416052149</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +202,8 @@
     <MESSAGE value="第一次提交，完成了注册服务使用Eureka" />
     <MESSAGE value="第二次提交测试" />
     <MESSAGE value="父类pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="父类pom" />
+    <MESSAGE value="gateway 集成完毕。 还需要 oauth2，spring config、server" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway 集成完毕。 还需要 oauth2，spring config、server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

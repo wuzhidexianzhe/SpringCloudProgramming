@@ -14,7 +14,6 @@ import reactor.core.publisher.Mono;
 
 @EnableConfigurationProperties(UriConfiguration.class)
 @SpringBootApplication
-@RestController
 public class GatewayServerApplication {
 
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class GatewayServerApplication {
 
 
     /*
-     * @Description: 配置request/response，或者是获取路由句柄。也可以配置predicates和filters
+     * @Description: 配置request/response，或者是获取路由句柄。也可以配置predicates和filters.也可以在配置文件里代替
      * @Author: zsj
      * @Date: 2022/5/1 18:09
      * param: [routeLocatorBuilder]
@@ -33,20 +32,13 @@ public class GatewayServerApplication {
     public RouteLocator myRoutes(RouteLocatorBuilder routeLocatorBuilder, UriConfiguration uriConfiguration){
         String httpUri = uriConfiguration.getHttpbin();
         return routeLocatorBuilder.routes()
-                .route(p->p.path("/get")
-                        .filters(f->f.addRequestHeader("Hello","world"))
-                        .uri(httpUri))
-                .route(p->p.host("*.circuitbreaker.com")
+                .route("base-server",p->p.path("/hello")
+                        .uri("lb://base-server:8084"))
+                .route("error-test",p->p.host("*.circuitbreaker.com")
                         .filters(f ->f.circuitBreaker(config -> config
                                 .setName("mycmd")
                                 .setFallbackUri("forward:/fallback")))
-                        .uri(httpUri))
+                        .uri("lb://base-server:8084"))
                 .build();
     }
-
-    @RequestMapping("/fallback")
-    public Mono<String> fallback() {
-        return Mono.just("fallback");
-    }
-
 }
